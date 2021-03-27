@@ -1,7 +1,7 @@
 def substrings(string, words)
     tally = Hash.new(0)
-    words.map do |word|
-      if string.include? word
+    words.each do |word|
+      if string.downcase.include? word.downcase
         tally[word] += 1
       end
     end
